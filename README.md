@@ -1,9 +1,9 @@
 # Project description: 
-We know that every time a user of the music app plays a song, it is recorded on the json files within the folder `log_data` located in AWS S3 at `s3://udacity-dend/log_data`.
-We also know that the information related to each song available on the music app is stored in the json files within the folder `song_data` located in AWS S3 at `s3://udacity-dend/song_data/A/A/A`.
 
 The goal of the project is to extract the data from AWS S3 to an EMR cluster then create a set of fact/dimensional Spark dataFrame and finally to write those dataframe in AWS S3.
 
+We know that every time a user of the music app plays a song, it is recorded on the json files within the folder `log_data` located in AWS S3 at `s3://udacity-dend/log_data`.
+We also know that the information related to each song available on the music app is stored in the json files within the folder `song_data` located in AWS S3 at `s3://udacity-dend/song_data/A/A/A`.
 
 # Database design: 
 
