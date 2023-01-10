@@ -21,7 +21,7 @@ We also know that the information related to each song available on the music ap
 
 # ETL Process: 
 The information related to each song available on the music app is stored in the json files within the folder `song_data`.
-Each file of `song_data` refres to one specific song.
+Each file of `song_data` refers to one specific song.
 So the program will extract the information from the files in `song_data` to the Spark dataFrames `songs_table` and `artists_table`. The code does basically a copy/paste.
 
 Every time an user of the music app plays a song, it is recorded on the json files within the folder `log_data`.
