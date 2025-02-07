@@ -1,9 +1,17 @@
-# Project description: 
+# Project Description
 
-The goal of the project is to extract the data from AWS S3 to an EMR cluster, then create a set of fact/dimensional Spark DataFrames, and finally write those DataFrames in AWS S3.
+The goal of this project is to process music streaming data from AWS S3 using Apache Spark on an EMR cluster. The process involves extracting JSON data, transforming it into structured Spark DataFrames, and storing the results in AWS S3 in **Parquet format**.
 
-We know that every time a user of the music app plays a song, it is recorded in the JSON files within the folder `log_data` located in AWS S3 at `s3://udacity-dend/log_data`.
-We also know that the information related to each song available on the music app is stored in the JSON files within the folder `song_data` located in AWS S3 at `s3://udacity-dend/song_data/A/A/A`.
+Each time a user plays a song on the music app, the event is logged in JSON files stored in the **`log_data`** folder at `s3://udacity-dend/log_data`. These logs capture user interactions and session details.
+
+Additionally, metadata about each song available in the music app is stored in JSON files within the **`song_data`** folder at `s3://udacity-dend/song_data/A/A/A`. This dataset includes details about songs and artists.
+
+The ETL script processes these datasets by:
+- **Extracting** raw JSON data from S3.
+- **Transforming** the data into structured tables for analysis.
+- **Loading** the processed data back into S3 as **optimized Parquet files**, partitioned for efficiency.
+
+The output consists of five structured tables: **songs, artists, users, time, and songplays**, ensuring efficient storage and query performance.
 
 # Database design: 
 
